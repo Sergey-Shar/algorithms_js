@@ -1,5 +1,5 @@
 const arr: number[] = [
-  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
 ];
 
 let countTwo = 0;
@@ -10,7 +10,7 @@ function binarySearch(arr: number[], num: number): number {
   let middle = 0;
   let faund = false;
   let position = -1;
-  while (faund === false && start <= end) {
+  while (!faund && start <= end) {
     countTwo += 1;
     middle = Math.floor((start + end) / 2);
     if (arr[middle] === num) {
@@ -26,6 +26,7 @@ function binarySearch(arr: number[], num: number): number {
   }
   return position;
 }
+
 
 // O(log n) — логарифмическая сложность
 // Простейший пример — бинарный поиск. Если массив отсортирован,
