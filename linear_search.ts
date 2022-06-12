@@ -1,12 +1,10 @@
+import { ArrType } from ".";
 
-const numArray: number[] = [1, 5, 4, 3, 6, 5, 8, 11, 9, 7, 6, 5, 8, 11, 9, 45, 65 ,22];
+let count1 = 0;
 
-
-let count = 0;
-
-function linearSearch(arr: number[], item: number): number | null {
+function linearSearch(arr: ArrType, item: number): number | null {
   for (let i = 0; i < arr.length; i++) {
-    count += 1;
+    count1 += 1;
     if (arr[i] === item) {
       return i;
     }
@@ -16,12 +14,11 @@ function linearSearch(arr: number[], item: number): number | null {
 
 const linear = (arr: number[], num: number) => {
   const index = arr.findIndex((item) => {
-    count += 1;
+    count1 += 1;
     return item === num;
   });
   return index;
 };
-
 
 // O(n) — линейная сложность
 // Такой сложностью обладает, например,
